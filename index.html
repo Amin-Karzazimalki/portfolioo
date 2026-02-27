@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>AMIN • Full-Stack Developer</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+    <!-- Header + Navigation fixe -->
+    <header class="header">
+        <div class="container header-content">
+            <div class="logo-name">
+                <span class="logo">AMIN</span>
+            </div>
+
+            <nav class="main-nav">
+                <a href="#about"    class="nav-link">About</a>
+                <a href="#skills"   class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact"  class="nav-link">Contact</a>
+
+                <div class="lang-switcher">
+                    <button data-lang="en" class="lang-btn active">EN</button>
+                    <button data-lang="fr" class="lang-btn">FR</button>
+                    <button data-lang="ar" class="lang-btn">AR</button>
+                    <button data-lang="pt" class="lang-btn">PT</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+
+        <section id="hero">
+            <div class="container">
+                <h1 id="hero-title">Full-Stack Developer</h1>
+                <p id="hero-subtitle">Building modern web experiences • Osasco, Brazil</p>
+                <div class="profile-pic-wrapper">
+                    <img id="profile-img" src="photo.jpg" alt="AMIN">
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <h2 id="about-title">About Me</h2>
+                <p id="about-text">
+                    Passionate full-stack developer focused on clean code, performance and great user experience.
+                    <!-- Remplace par ton vrai texte -->
+                </p>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="container">
+                <h2 id="skills-title">Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-tag">HTML5</div>
+                    <div class="skill-tag">CSS3 / Tailwind</div>
+                    <div class="skill-tag">JavaScript ES6+</div>
+                    <div class="skill-tag">React / Next.js</div>
+                    <div class="skill-tag">Node.js / Express</div>
+                    <div class="skill-tag">MongoDB</div>
+                    <div class="skill-tag">PostgreSQL</div>
+                    <div class="skill-tag">Git • GitHub</div>
+                    <!-- Ajoute / retire -->
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 id="projects-title">Projects</h2>
+                <div class="projects-grid">
+                    <!-- Exemple – duplique les blocs -->
+                    <div class="project-card">
+                        <div class="project-img-placeholder"></div>
+                        <h3>E-commerce Dashboard</h3>
+                        <p>Next.js • Tailwind • Supabase • Stripe</p>
+                        <div class="project-links">
+                            <a href="#" target="_blank">Demo</a>
+                            <a href="#" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-img-placeholder"></div>
+                        <h3>Real-time Chat App</h3>
+                        <p>React • Firebase • TailwindCSS</p>
+                        <div class="project-links">
+                            <a href="#" target="_blank">Demo</a>
+                            <a href="#" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+
+                    <!-- Ajoute tes vrais projets ici -->
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 id="contact-title">Get in Touch</h2>
+                <p id="contact-text">
+                    Open to new opportunities and collaborations.<br>
+                    Email: amin.dev@email.com<br>
+                    WhatsApp / Telegram : +55 (11) 9xxxx-xxxx<br>
+                    Location: Osasco – São Paulo, Brazil
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© <span id="year"></span> AMIN • Full-Stack Developer</p>
+            <div class="social-links">
+                <a href="#" target="_blank">GitHub</a>
+                <a href="#" target="_blank">LinkedIn</a>
+                <a href="#" target="_blank">Twitter/X</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
