@@ -2,67 +2,85 @@
 document.getElementById("year").textContent = new Date().getFullYear();
 
 // cursor
-    const trailCount = 5;
-    const trails = [];
+   const trailCount = 5;
+const trails = [];
 
-    // Création des éléments trail
-    for (let i = 0; i < trailCount; i++) {
-      const el = document.createElement('div');
-      el.className = 'trail';
-      el.style.width = `${6 + i * 4}px`;
-      el.style.height = el.style.width;
-      el.style.background = `rgba(200, 220, 255, ${0.9 - i * 0.18})`;
-      el.style.opacity = 0.9 - i * 0.18;
-      el.style.boxShadow = `0 0 ${10 + i * 6}px rgba(180, 200, 255, ${0.5 - i * 0.1})`;
-      document.body.appendChild(el);
-      trails.push(el);
-    }
+// Couleur de base en RGB (pour pouvoir jouer sur l'opacité)
+const baseColor = { r: 249, g: 115, b: 22 };   // #f97316
 
-    let mouseX = 0;
-    let mouseY = 0;
+// Création des éléments trail
+for (let i = 0; i < trailCount; i++) {
+  const el = document.createElement('div');
+  el.className = 'trail';
+  
+  el.style.width  = `${6 + i * 4}px`;
+  el.style.height = el.style.width;
+  
+  // Opacité qui diminue pour les traînées plus anciennes
+  const opacity = 0.92 - i * 0.18;
+  
+  el.style.background = `rgba(${baseColor.r}, ${baseColor.g}, ${baseColor.b}, ${opacity})`;
+  
+  // Optionnel : un léger glow / halo assorti
+  el.style.boxShadow = `0 0 ${10 + i * 6}px rgba(${baseColor.r}, ${baseColor.g}, ${baseColor.b}, ${0.5 - i * 0.12})`;
+  
+  // Centrage parfait (important pour que ça suive bien la souris)
+  el.style.position = 'fixed';
+  el.style.transform = 'translate(-50%, -50%)';
+  el.style.pointerEvents = 'none';
+  el.style.borderRadius = '50%';
+  el.style.zIndex = '9999';
+  
+  document.body.appendChild(el);
+  trails.push(el);
+}
 
-    window.addEventListener('mousemove', e => {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-    });
+let mouseX = 0;
+let mouseY = 0;
 
-    let positions = Array(trailCount).fill().map(() => ({x: 0, y: 0}));
+window.addEventListener('mousemove', e => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+});
 
-    function animate() {
-      // Le premier suit directement
-      positions[0].x += (mouseX - positions[0].x) * 0.45;
-      positions[0].y += (mouseY - positions[0].y) * 0.45;
+let positions = Array(trailCount).fill().map(() => ({x: 0, y: 0}));
 
-      // Les suivants suivent le précédent avec délai croissant
-      for (let i = 1; i < trailCount; i++) {
-        const prev = positions[i - 1];
-        positions[i].x += (prev.x - positions[i].x) * (0.22 - i * 0.03);
-        positions[i].y += (prev.y - positions[i].y) * (0.22 - i * 0.03);
-      }
+function animate() {
+  // Le premier suit directement la souris
+  positions[0].x += (mouseX - positions[0].x) * 0.45;
+  positions[0].y += (mouseY - positions[0].y) * 0.45;
 
-      // Applique les positions
-      trails.forEach((el, i) => {
-        el.style.left = positions[i].x + 'px';
-        el.style.top  = positions[i].y + 'px';
-      });
+  // Les suivants suivent le précédent avec délai croissant
+  for (let i = 1; i < trailCount; i++) {
+    const prev = positions[i - 1];
+    positions[i].x += (prev.x - positions[i].x) * (0.22 - i * 0.03);
+    positions[i].y += (prev.y - positions[i].y) * (0.22 - i * 0.03);
+  }
 
-      requestAnimationFrame(animate);
-    }
+  // Applique les positions
+  trails.forEach((el, i) => {
+    el.style.left = positions[i].x + 'px';
+    el.style.top  = positions[i].y + 'px';
+  });
 
-    animate();
+  requestAnimationFrame(animate);
+}
 
-    // Optionnel : grossit légèrement le premier cercle au hover
-    document.querySelectorAll('a, button, .link').forEach(el => {
-      el.addEventListener('mouseenter', () => {
-        trails[0].style.transform = 'translate(-50%, -50%) scale(2.2)';
-        trails[0].style.background = 'rgba(255, 240, 200, 0.95)';
-      });
-      el.addEventListener('mouseleave', () => {
-        trails[0].style.transform = 'translate(-50%, -50%) scale(1)';
-        trails[0].style.background = 'rgba(200, 220, 255, 0.9)';
-      });
-    });
+animate();
 
+// Bonus : changement de couleur + grossissement au survol des liens/boutons
+document.querySelectorAll('a, button, .link').forEach(el => {
+  el.addEventListener('mouseenter', () => {
+    trails[0].style.transform = 'translate(-50%, -50%) scale(2.3)';
+    trails[0].style.background = `rgba(${baseColor.r + 20}, ${baseColor.g + 40}, ${baseColor.b + 30}, 0.98)`;
+    // version plus claire / plus vive au survol
+  });
+
+  el.addEventListener('mouseleave', () => {
+    trails[0].style.transform = 'translate(-50%, -50%) scale(1)';
+    trails[0].style.background = `rgba(${baseColor.r}, ${baseColor.g}, ${baseColor.b}, 0.92)`;
+  });
+});
 // Traductions
 const translations = {
     en: {
