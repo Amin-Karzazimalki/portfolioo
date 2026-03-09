@@ -212,7 +212,22 @@ h2 {
 
 .project-img-placeholder {
     height: 180px;
-    background: linear-gradient(135deg, #222, #181818);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Chaque projet a sa propre image */
+.quiz {
+    background-image: url('image.png');
+}
+
+.ecommerce {
+    background-image: url('foto.png');
+}
+
+.chat {
+    background-image: url('image.png');
 }
 
 .project-card h3 {
