@@ -76,14 +76,6 @@ body {
     align-items: center;
 }
 
-.logoo {
-  width: clamp(5px, 6vw, 30px);
-  border-radius: 50%;
-  border: 2px solid #000000;
-  float: left; /* Ajoute cette ligne pour positionner le logo à gauche */
-  margin-right: 15px; /* Optionnel : ajoute un peu d'espace à droite du logo */
-}
-
 .logo-name .logo {
     font-size: 1.8rem;
     font-weight: 800;
