@@ -275,6 +275,7 @@ h2 {
     margin: 0 1rem;
     text-decoration: none;
     transition: color 0.2s;
+    text-align: center;
 }
 
 .social-links a:hover {
