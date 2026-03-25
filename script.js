@@ -85,7 +85,7 @@ document.querySelectorAll('a, button, .link').forEach(el => {
 const translations = {
     en: {
         heroTitle: "Full-Stack Developer",
-        heroSubtitle: "Building modern web experiences ;) ",
+        heroSubtitle: "Building modern web experiences  ",
         aboutTitle: "About Me",
         aboutText: "Passionate full-stack developer focused on clean code, performance and great user experience.",
         skillsTitle: "Skills",
@@ -95,7 +95,7 @@ const translations = {
     },
     fr: {
         heroTitle: "Développeur Full-Stack",
-        heroSubtitle: "Création d'expériences web modernes ;)",
+        heroSubtitle: "Création d'expériences web modernes ",
         aboutTitle: "À propos",
         aboutText: "Développeur full-stack passionné, axé sur du code propre, de la performance et une excellente expérience utilisateur.",
         skillsTitle: "Compétences",
@@ -115,7 +115,7 @@ const translations = {
     },
     pt: {
         heroTitle: "Desenvolvedor Full-Stack",
-        heroSubtitle: "Criando experiências web modernas ;)",
+        heroSubtitle: "Criando experiências web modernas ",
         aboutTitle: "Sobre Mim",
         aboutText: "Desenvolvedor full-stack apaixonado, focado em código limpo, performance e excelente experiência do usuário.",
         skillsTitle: "Habilidades",
