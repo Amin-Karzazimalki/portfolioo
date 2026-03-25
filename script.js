@@ -91,7 +91,7 @@ const translations = {
         skillsTitle: "Skills",
         projectsTitle: "Projects",
         contactTitle: "Get in Touch",
-        contactText: "Open to new opportunities and collaborations.<br>Email: amin.dev@email.com<br>WhatsApp / Telegram : +55 (11) 9xxxx-xxxx<br>Location: Osasco – São Paulo, Brazil"
+        contactText: 
     },
     fr: {
         heroTitle: "Développeur Full-Stack",
@@ -101,7 +101,7 @@ const translations = {
         skillsTitle: "Compétences",
         projectsTitle: "Projets",
         contactTitle: "Contactez-moi",
-        contactText: "Ouvert aux nouvelles opportunités et collaborations.<br>Email : amin.dev@email.com<br>WhatsApp / Telegram : +55 (11) 9xxxx-xxxx<br>Localisation : Osasco – São Paulo, Brésil"
+        contactText: 
     },
     ar: {
         heroTitle: "مطور فول ستاك",
@@ -111,7 +111,7 @@ const translations = {
         skillsTitle: "المهارات",
         projectsTitle: "المشاريع",
         contactTitle: "تواصلوا معي",
-        contactText: "منفتح على فرص وتعاونات جديدة.<br>البريد: amin.dev@email.com<br>واتساب / تليجرام: +55 (11) 9xxxx-xxxx<br>الموقع: أوساسكو – ساو باولو، البرازيل"
+        contactText: 
     },
     pt: {
         heroTitle: "Desenvolvedor Full-Stack",
@@ -121,7 +121,7 @@ const translations = {
         skillsTitle: "Habilidades",
         projectsTitle: "Projetos",
         contactTitle: "Entre em Contato",
-        contactText: "Aberto a novas oportunidades e colaborações.<br>Email: amin.dev@email.com<br>WhatsApp / Telegram: +55 (11) 9xxxx-xxxx<br>Localização: Osasco – São Paulo, Brasil"
+        contactText:
     }
 };
 
